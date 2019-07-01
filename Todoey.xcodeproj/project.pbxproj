@@ -10,6 +10,7 @@
 		490E915D22C75BDE004E11D6 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490E915C22C75BDE004E11D6 /* CategoryViewController.swift */; };
 		490E916122C8C233004E11D6 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490E916022C8C233004E11D6 /* Category.swift */; };
 		490E916322C8C23B004E11D6 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490E916222C8C23B004E11D6 /* Item.swift */; };
+		490E916522C9D725004E11D6 /* SwipeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490E916422C9D725004E11D6 /* SwipeTableViewController.swift */; };
 		490FC4B722A8F3C9002BA7F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490FC4B622A8F3C9002BA7F6 /* AppDelegate.swift */; };
 		490FC4B922A8F3C9002BA7F6 /* TodoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490FC4B822A8F3C9002BA7F6 /* TodoListViewController.swift */; };
 		490FC4BC22A8F3C9002BA7F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 490FC4BA22A8F3C9002BA7F6 /* Main.storyboard */; };
@@ -22,6 +23,7 @@
 		490E915C22C75BDE004E11D6 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		490E916022C8C233004E11D6 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		490E916222C8C23B004E11D6 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		490E916422C9D725004E11D6 /* SwipeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeTableViewController.swift; sourceTree = "<group>"; };
 		490FC4B322A8F3C9002BA7F6 /* Todoey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Todoey.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		490FC4B622A8F3C9002BA7F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		490FC4B822A8F3C9002BA7F6 /* TodoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListViewController.swift; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 			children = (
 				490E915C22C75BDE004E11D6 /* CategoryViewController.swift */,
 				490FC4B822A8F3C9002BA7F6 /* TodoListViewController.swift */,
+				490E916422C9D725004E11D6 /* SwipeTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -140,7 +143,7 @@
 				490FC4AF22A8F3C9002BA7F6 /* Sources */,
 				490FC4B022A8F3C9002BA7F6 /* Frameworks */,
 				490FC4B122A8F3C9002BA7F6 /* Resources */,
-				7F47C4E2032E9462EF240072 /* [CP] Embed Pods Frameworks */,
+				17CA3FB0A5C20314511DAC78 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -198,6 +201,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		17CA3FB0A5C20314511DAC78 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Todoey/Pods-Todoey-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Todoey/Pods-Todoey-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Todoey/Pods-Todoey-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		5B8DFA7DE011054B6CBBB308 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -220,23 +240,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		7F47C4E2032E9462EF240072 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Todoey/Pods-Todoey-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Todoey/Pods-Todoey-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Todoey/Pods-Todoey-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -248,6 +251,7 @@
 				490E916122C8C233004E11D6 /* Category.swift in Sources */,
 				490FC4B922A8F3C9002BA7F6 /* TodoListViewController.swift in Sources */,
 				490E916322C8C23B004E11D6 /* Item.swift in Sources */,
+				490E916522C9D725004E11D6 /* SwipeTableViewController.swift in Sources */,
 				490FC4B722A8F3C9002BA7F6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -397,6 +401,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TG3H48ZPJF;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Realm\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/RealmSwift\"",
+				);
 				INFOPLIST_FILE = Todoey/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -416,6 +425,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TG3H48ZPJF;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Realm\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/RealmSwift\"",
+				);
 				INFOPLIST_FILE = Todoey/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
