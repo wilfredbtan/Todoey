@@ -8,6 +8,7 @@
 
 import UIKit
 import RealmSwift
+import ChameleonFramework
 
 class TodoListViewController: SwipeTableViewController {
 
@@ -24,12 +25,25 @@ class TodoListViewController: SwipeTableViewController {
         loadItems()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        if let colorHex = selectedCategory?.color {
+            guard let navBar = navigationController?.navigationBar else {fatalError(("Navigation controller does not exist"))}
+            navBar.barTintColor = UIColor(hexString: colorHex)
+        }
+    }
+    
     //Mark - Tableview Datasource Methods
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = super.tableView(tableView, cellForRowAt: indexPath)
         
         if let item = todoItems?[indexPath.row] {
             cell.textLabel?.text = item.title
+            
+            if let bgColor = UIColor(hexString: selectedCategory!.color)?                .darken(byPercentage: CGFloat(indexPath.row) / CGFloat(todoItems!.count)) {
+                cell.backgroundColor = bgColor
+                cell.textLabel?.textColor = UIColor(contrastingBlackOrWhiteColorOn:bgColor, isFlat:true)
+            }
+            
             cell.accessoryType = item.done ? .checkmark : .none
         } else {
             cell.textLabel?.text = "No items added"
